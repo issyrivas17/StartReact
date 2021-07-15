@@ -24,6 +24,7 @@ background: '#ea2027',
 color: '#fff',
 border: 'none', 
 padding: '10px 15px',
-borderRadius: '50%'
+borderRadius: '50%',
+cursor: 'pointer', 
  }
 export default Task;
