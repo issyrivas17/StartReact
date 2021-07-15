@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; 
+import './task.css'; 
 
 class Task extends Component {
   constructor(props) {
@@ -7,13 +8,22 @@ class Task extends Component {
   }
   render() {
     const { task } = this.props;
-    return (
-      <div>
+    return ( 
+      <p>
         {task.title} -{task.descripcion} -{task.done} -{task.id}
         <input type="checkbox" />
-        <button>X</button>
-      </div>
-    );
+        <button style = {btnDelete}>X</button>
+      </p> 
+    ); 
   }
-}
+} 
+
+const btnDelete = {
+fontSize: '18px',
+background: '#ea2027',
+color: '#fff',
+border: 'none', 
+padding: '10px 15px',
+borderRadius: '50%'
+ }
 export default Task;
