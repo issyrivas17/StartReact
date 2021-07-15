@@ -3,7 +3,7 @@ import './App.css';
  
  import tasks from './Ejemplos/tasks.json';  
 
- import Tasks from './Components/Tasks'; 
+ import ListTasks from './Components/list-Tasks'; 
  
 class App extends Component  { 
   state = {
@@ -16,7 +16,7 @@ class App extends Component  {
   render () {
   return (
     <div> 
-      <Tasks tasks ={this.state.tasks}/>
+      <ListTasks tasks ={this.state.tasks}/>
     </div>
   )}  
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Task from './Task';   
 
 
-class Tasks extends Component {
+class ListTasks extends Component {
 
    constructor (props){
         super (props)
@@ -17,5 +17,5 @@ class Tasks extends Component {
        
 }
  }
- export default Tasks; 
+ export default ListTasks; 
 
