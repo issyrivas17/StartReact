@@ -8,7 +8,7 @@
     "id":1,
     "title": "Tarea dos", 
     "description": "Lorem ipsum", 
-    "done":false
+    "done":true
 }, 
 
 {

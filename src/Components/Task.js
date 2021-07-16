@@ -1,7 +1,18 @@
 import React, { Component } from "react"; 
-import './task.css'; 
 
-class Task extends Component {
+
+class Task extends Component { 
+
+styleCompleted(){
+    return { 
+        fontSize: '20px',
+        color:this.props.task.done ? 'gray': 'black' ,
+         tetxDecoration:'none', 
+    }
+        
+    
+    
+}
   constructor(props) {
     super(props);
     console.log("COMPONENTE HIJO:::", this.props);
@@ -9,8 +20,8 @@ class Task extends Component {
   render() {
     const { task } = this.props;
     return ( 
-      <p>
-        {task.title} -{task.descripcion} -{task.done} -{task.id}
+      <p style = {this.styleCompleted()}>
+        {task.title} -{task.description} -{task.done} -{task.id}
         <input type="checkbox" />
         <button style = {btnDelete}>X</button>
       </p> 
