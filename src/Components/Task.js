@@ -1,22 +1,22 @@
 import React, { Component } from "react"; 
 
+import PropTypes from 'prop-types'; 
 
 class Task extends Component { 
 
-styleCompleted(){
-    return { 
-        fontSize: '20px',
-        color:this.props.task.done ? 'gray': 'black' ,
-         tetxDecoration:'none', 
-    }
-        
-    
-    
-}
   constructor(props) {
     super(props);
     console.log("COMPONENTE HIJO:::", this.props);
   }
+  
+  styleCompleted(){
+      return { 
+          fontSize: '20px',
+          color:this.props.task.done ? 'gray': 'black' ,
+          textDecorationLine:this.props.task.done ? 'line-through':'none'
+      }   
+  }
+
   render() {
     const { task } = this.props;
     return ( 
@@ -29,13 +29,18 @@ styleCompleted(){
   }
 } 
 
+Task.propTypes = { 
+  task: PropTypes.object.isRequired 
+} 
+
 const btnDelete = {
-fontSize: '18px',
-background: '#ea2027',
-color: '#fff',
-border: 'none', 
-padding: '10px 15px',
-borderRadius: '50%',
-cursor: 'pointer', 
- }
+  fontSize: '18px',
+  background: '#ea2027',
+  color: '#fff',
+  border: 'none', 
+  padding: '10px 15px',
+  borderRadius: '50%',
+  cursor: 'pointer', 
+}
+
 export default Task;
