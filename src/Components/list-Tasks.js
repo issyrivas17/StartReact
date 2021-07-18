@@ -10,7 +10,7 @@ class ListTasks extends Component {
    }
     render () {
         return (
-                this.props.tasks.map( task => <Task task={task} key={task.id}/>)
+                this.props.tasks.map( task => <Task task={task} key={task.id} deleteTask={this.props.deleteTask}checkDone= {this.props.checkDone}/>)
         ) 
 }
  } 
