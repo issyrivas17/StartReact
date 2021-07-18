@@ -6,7 +6,7 @@ import './App.css';
  //Components
  import ListTasks from './Components/list-Tasks'; 
  import TaskForm from './Components/TaskForm'; 
- 
+ import Posts from './Components/Posts';
  
 class App extends Component  { 
 
@@ -48,6 +48,8 @@ this.setState({tasks: newTasks})
     <div> 
       <TaskForm addTask={this.addTask}/>
       <ListTasks tasks ={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone}/>
+    <Posts/>
+    
     </div>
   )}  
 
