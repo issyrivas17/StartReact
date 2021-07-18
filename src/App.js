@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
  
  import tasks from './Ejemplos/tasks.json';  
-
- import ListTasks from './Components/list-Tasks'; 
  
+ //Components
+ import ListTasks from './Components/list-Tasks'; 
+ import TaskForm from './Components/TaskForm'; 
  
  
 class App extends Component  { 
@@ -18,6 +19,7 @@ class App extends Component  {
   render () {
   return (
     <div> 
+      <TaskForm/>
       <ListTasks tasks ={this.state.tasks}/>
     </div>
   )}  

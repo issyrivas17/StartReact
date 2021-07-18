@@ -1,5 +1,4 @@
 import React, { Component } from 'react'; 
-
 import Task from './Task';   
 
 
@@ -13,9 +12,9 @@ class ListTasks extends Component {
         return (
                 this.props.tasks.map( task => <Task task={task} key={task.id}/>)
         ) 
-
-       
 }
- }
+ } 
+ 
+
  export default ListTasks; 
 

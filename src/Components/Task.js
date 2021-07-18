@@ -21,7 +21,7 @@ class Task extends Component {
     const { task } = this.props;
     return ( 
       <p style = {this.styleCompleted()}>
-        {task.title} -{task.description} -{task.done} -{task.id}
+        {task.title} -{task.description} - {task.id}
         <input type="checkbox" />
         <button style = {btnDelete}>X</button>
       </p> 
