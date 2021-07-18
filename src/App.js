@@ -9,17 +9,31 @@ import './App.css';
  
  
 class App extends Component  { 
-  state = {
-    tasks 
-  }
+
   constructor (props){
     super (props)
     console.log('STATE:::', this.state);
-}
+} 
+
+  state = {
+    tasks 
+  }
+
+  addTask = (title,description) => {
+    const newTask = {
+      title:title,
+      description: description,
+      id:this.state.tasks.length
+    }
+    console.log('NEW TASKS::', newTask)
+    this.setState ({
+      tasks: [...this.state.tasks,newTask] 
+    })
+  }
   render () {
-  return (
+  return (   
     <div> 
-      <TaskForm/>
+      <TaskForm addTask={this.addTask}/>
       <ListTasks tasks ={this.state.tasks}/>
     </div>
   )}  
